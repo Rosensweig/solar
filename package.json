@@ -1,0 +1,20 @@
+{
+  "name": "utility_view",
+  "version": "1.0.0",
+  "description": "View and graph utility bill information, for company code challenge",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "Daniel Rosensweig",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7"
+  }
+}
