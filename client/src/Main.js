@@ -17,7 +17,6 @@ class Main extends Component {
     return (
       <BrowserRouter>
       	<div className="Main">
-      		{console.log(this.state)}
       		<Route exact path="/" render={(props) => (<CurrentBill monthString={this.monthString} {...props} {...this.state.data[0]} />)} />
       		<Route exact path="/current" render={(props) => (<CurrentBill monthString={this.monthString} {...props} {...this.state.data[0]} />)} />
       		<Route exact path="/history" render={(props) => (<HistGraphHeader monthString={this.monthString} {...props} {...this.state} />)} />
@@ -50,7 +49,6 @@ class Main extends Component {
 	}
 
 	update(newState) {
-		console.log("New State: ", newState);
 		this.setState(newState);
 	}
 
@@ -65,7 +63,6 @@ class Main extends Component {
 			if (response.ok) {
 				response.json()
 				.then((json) => {
-					console.log("Server response json: ", json);
 					this.setState({
 						...json
 					});

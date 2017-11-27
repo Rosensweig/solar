@@ -26,7 +26,6 @@ class HistGraphHeader extends Component {
 
     return (
       <div className="HistGraphHeader">
-      	{console.log(this.props)}
       	<h2>History & Graphs</h2>
       	<nav>
       		<a href="history" className="history">History</a>

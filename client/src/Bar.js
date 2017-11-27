@@ -21,7 +21,6 @@ class Bar extends Component {
 
   		return (
 	      <div className="Bar inner" >
-	      	{console.log(this.props)}
 	      	<h3>Electricity Usage, Bill, and Savings</h3>
 	      	<canvas id="barGraph" width={width} height={height}></canvas>
 	      </div>
@@ -40,11 +39,7 @@ class Bar extends Component {
   	// not rendering anything until we have parent container widths, we have to be careful
   	// we don't try to modify things that don't exist yet.
   	if (document.getElementById('barGraph')) { 
-  	  console.log("Hello from barGraph check in componentDidUpdate");
   	  this.drawChart();
-  	} else {
-  		console.log("No barGraph to chart yet in componentDidUpdate.");
-  		// setTimeout(this.waitForChart, 100);
   	}
   }
 

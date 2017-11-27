@@ -21,7 +21,6 @@ class History extends Component {
 
     return (
       <div className="History inner">
-      	{console.log(this.props)}
       	{rows}
       </div>
     );

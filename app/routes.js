@@ -56,22 +56,18 @@ module.exports = function(app) {
 
 	//delete data for a particular year and month
 	app.delete('/data', (req, res) => {
-		console.log(req.body);
 		// Make sure delete data specifies a year and month
 		if (!req.body.year || !req.body.month) {
-			console.log("Missing year or month.");
 			return res.status(500).send("Delete requests must specify valid year and month.");
 		}
 		for (let i=0; i<utilData.data.length; i++) {
 			//check whether year and month match
 			if (utilData.data[i].year === req.body.year && utilData.data[i].month === req.body.month) {
-				console.log("Found year and month.")
 				utilData.data.splice(i,1);	//delete current datapoint from our data store
 				return res.json(utilData.data);	//send complete copy of current data
 			}
 		}
-		console.log("No match for year and month.")
-		return res.json({data: "Not found!"});	//No match, so tell the client that
+		return res.json({data: "Date not found!"});	//No match, so tell the client that
 	});
 
 } // ends module.exports

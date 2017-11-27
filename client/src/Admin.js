@@ -35,8 +35,6 @@ class Admin extends Component {
     return (
       <div className="Admin">
       	<h2>Admin Panel</h2>
-      	{console.log("Current props: ", this.props)}
-      	{console.log("Current state: ", this.state)}
       	<form onSubmit={this.submitEdit} className="inner">
       		{rows}
       		<div className="editForm">
@@ -134,7 +132,6 @@ class Admin extends Component {
 			if (response.ok) {
 				response.json()
 				.then((json) => {
-					console.log("Server response json: ", json);
 					this.props.update({
 						data: [...json]
 					});
@@ -171,7 +168,6 @@ class Admin extends Component {
 			if (response.ok) {
 				response.json()
 				.then((json) => {
-					console.log("Server response json: ", json);
 					this.props.update({
 						data: [...json]
 					});

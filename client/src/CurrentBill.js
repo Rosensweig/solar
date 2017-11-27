@@ -10,7 +10,6 @@ class CurrentBill extends Component {
     return (
       <div className="CurrentBill">
       	<h2>Viewing Current Bill</h2>
-      	{console.log("Props: ", this.props)}
       	<div className="inner">
       		<h3>{this.props.monthString(this.props.month)}, {this.props.year}</h3>
 	      	<h3 className="tab" >Usage: {this.props.kwh} kwh</h3>
