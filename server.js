@@ -1,12 +1,12 @@
 // server.js
 
 // set up ======================================================================
-var express  = require('express');
-var app      = express();
-var port     = process.env.PORT || 8080;
+const express  = require('express');
+const app      = express();
+const port     = process.env.PORT || 8080;
 
-var morgan       = require('morgan');
-var bodyParser   = require('body-parser');
+const morgan       = require('morgan');
+const bodyParser   = require('body-parser');
 
 
 // set up express application

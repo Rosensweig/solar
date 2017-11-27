@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #000000;
+  background-image: url("sky2.jpg");
+  background-repeat: repeat-y;
+  background-attachment: top
+}
+
+div {
+	text-align: center;
+}
+
+div.Main {
+	max-width: 800px;
+	margin: auto;
+}
+
+div.inner, div.row {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+div.inner {
+	background-color: #00000066;
+	padding: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+div.Menu {
+	margin-bottom: 50px;
+}
+
+div.editForm {
+	padding-top: 10px;
+	align-content: left;
+	text-align: left;
+}
+
+div.editForm select, div.editForm input, div.editForm button, div.editForm p {
+	margin-bottom: 10px;
+}
+
+label {
+	margin-left: 5px;
+}
+
+input[name="kwh"] {
+	margin-left: 1em;
+}
+
+a, h3, h2, h1, p {
+	text-decoration: none;
+	color: #fff;
+	font-family: proxima-nova;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1em;
+}
+
+.tab {
+	margin-left: 20px;
+}
+
+.hide {
+	display: none;
+}
+
+nav a {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+	float: right;
+	margin: 0px 10px 5px 10px;
+}
+
+#siteTitle {
+  font-weight: 600;
+  font-size: 20px;
+  float: left;
+  margin: 0px 20px 5px 20px;
+}
+
+div.HistGraphHeader nav a{
+	float: none;	
+}
+
+div.HistGraphHeader nav{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+nav {
+	padding: 5px;
+}
+
+canvas {
+	background: white;	
+	display: block;
+}
+
+div.Line, div.Bar {
+	text-align: center;
+}
+
+@media screen and (max-width:600px) {
+
+	nav a {
+		display: block;
+		clear: right;
+	}
+
+}
