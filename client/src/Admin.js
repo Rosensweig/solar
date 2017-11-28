@@ -33,7 +33,7 @@ class Admin extends Component {
 		}
 
     return (
-      <div className="Admin">
+      <div className="Admin inner">
       	<h2>Admin Panel</h2>
       	<form onSubmit={this.submitEdit} className="inner">
       		{rows}
