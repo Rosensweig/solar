@@ -48,7 +48,8 @@ label {
 }
 
 input[name="kwh"] {
-	margin-left: 1em;
+	margin-left: 1em
+	;
 }
 
 a, h3, h2, h1, p {

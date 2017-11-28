@@ -32,14 +32,15 @@ module.exports = function(app) {
 		if (!req.body.year || !req.body.month) {
 			return res.status(500).send({error: "Update data must contain valid year and month."});
 		}
-		for (let dataPoint of utilData.data) {
+		for (let i=0; i<utilData.data.length; i++) {
+			let dataPoint = utilData.data[i];
 			//check whether year and month match on this dataPoint
 			if (dataPoint.year === req.body.year && dataPoint.month === req.body.month) {
 				// update data fields, with failsafe in case of empty field in req.body
 				dataPoint.kwh = req.body.kwh || dataPoint.kwh;
 				dataPoint.bill = req.body.bill || dataPoint.bill;
 				dataPoint.savings = req.body.savings || dataPoint.savings;
-				return res.json(dataPoint);
+				return res.json(utilData.data);
 			} else if (dataPoint.year <= req.body.year && dataPoint.month < req.body.month) {
 				//data is sorted by date, so we don't have to check the rest of the array
 				// insert data here so that it stays sorted.

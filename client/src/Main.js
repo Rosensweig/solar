@@ -52,7 +52,7 @@ class Main extends Component {
 		this.setState(newState);
 	}
 
-	componentWillMount() {
+	componentDidMount() {
 		fetch('data', {
 		  credentials: 'include',
 		  method: 'GET',
@@ -71,7 +71,7 @@ class Main extends Component {
 				console.log("Error retrieving data from server.\n", response)
 			}
 		})
-	} // ends componentWillMount()
+	} // ends componentDidMount()
 
 } // closes Main component
 
